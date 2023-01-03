@@ -3,10 +3,17 @@ import {Component} from 'react'
 import './index.css'
 
 class DigitalTimer extends Component {
-  state = {minutes: 25, seconds: '00', isStart: false}
+  state = {limitMinutes: 25, seconds: 0, isStart: false}
+
+  onStartOrPauseBtn=()=>{
+      const{isStart}=this.state
+       if(isStart){
+           
+       }
+  }
 
   render() {
-    const {minutes, seconds, isStart} = this.state
+    const {limitMinutes, seconds, isStart} = this.state
     const iconUrl = isStart
       ? 'https://assets.ccbp.in/frontend/react-js/pause-icon-img.png '
       : 'https://assets.ccbp.in/frontend/react-js/play-icon-img.png'
@@ -19,21 +26,39 @@ class DigitalTimer extends Component {
           <div className="timer-background">
             <div className="timer-cont">
               <h1>
-                {minutes} : {seconds}
+                {limitMinutes} : {seconds}
               </h1>
               <p>Paused</p>
             </div>
           </div>
           <div className="icon-cont">
             <div className="operation-cont">
-              <img src={iconUrl} alt={altText} className="icon" />
+              <button type="button" className="timer-limit-cont">
+                {' '}
+                <img src={iconUrl} alt={altText} className="icon" />
+              </button>
+
               <h1>{iconText}</h1>
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/reset-icon-img.png"
-                alt="reset icon"
-                className="icon"
-              />
+              <button type="button" className="timer-limit-cont">
+                {' '}
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/reset-icon-img.png"
+                  alt="reset icon"
+                  className="icon"
+                />
+              </button>
+
               <h1>Reset</h1>
+            </div>
+            <h1>Set Limit</h1>
+            <div className="increment-decrement-cont">
+              <button type="button" className="sign">
+                -
+              </button>
+              <div className="limit-cont">{limitMinutes}</div>
+              <button type="button" className="sign">
+                +
+              </button>
             </div>
           </div>
         </div>
