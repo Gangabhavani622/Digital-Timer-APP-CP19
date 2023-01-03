@@ -1,0 +1,59 @@
+/* Write your CSS here */
+.app-cont {
+  background-image: linear-gradient(to left, #ffffff, #cffcf1);
+  height: 100vh;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto';
+}
+
+.sub-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.timer-background {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+  padding: 3px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 320px;
+}
+.timer-cont {
+  width: 45%;
+  height: 45%;
+  border-radius: 100%;
+  border-style: none;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.operation-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.icon {
+  height: 30px;
+  width: 30px;
+  margin: 8px;
+}
+
+.icon-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
